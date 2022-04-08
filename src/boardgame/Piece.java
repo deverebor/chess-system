@@ -1,7 +1,7 @@
 package boardgame;
 
 public class Piece {
-    protected final Position position;
+    protected Position position;
     private final Board board;
     
     public Piece(Board board) {
