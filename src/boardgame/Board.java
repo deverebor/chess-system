@@ -54,6 +54,7 @@ public class Board {
         Piece removedPieceOnTheBoard = piece(position);
         removedPieceOnTheBoard.position = null;
         pieces[position.getRow()][position.getColumn()] = null;
+        
         return removedPieceOnTheBoard;
     }
     
