@@ -38,8 +38,17 @@ public class Program {
                 
                 if(chessMatch.getPawnPromotion() != null) {
                     System.out.print("\nEnter an letter to promote pawn (B/N/R/Q): ");
-                    String pawnType = scanner.nextLine();
-                    chessMatch.replacePromotedPawn(pawnType.toUpperCase());
+                    String pawnType = scanner.nextLine().toUpperCase();
+                    while (
+                            !pawnType.equals("B")
+                            && !pawnType.equals("N")
+                            && !pawnType.equals("R")
+                            && !pawnType.equals("Q")
+                    ) {
+                        System.out.print("Invalid letter! Enter the correct letter (B/N/R/Q): ");
+                        pawnType = scanner.nextLine().toUpperCase();
+                    }
+                    chessMatch.replacePromotedPawn(pawnType);
                 }
             } catch (ChessException | InputMismatchException e) {
                 System.out.println(e.getMessage());
