@@ -35,6 +35,12 @@ public class Program {
                 if(capturedPiece != null) {
                     captured.add(capturedPiece);
                 }
+                
+                if(chessMatch.getPawnPromotion() != null) {
+                    System.out.print("\nEnter an letter to promote pawn (B/N/R/Q): ");
+                    String pawnType = scanner.nextLine();
+                    chessMatch.replacePromotedPawn(pawnType.toUpperCase());
+                }
             } catch (ChessException | InputMismatchException e) {
                 System.out.println(e.getMessage());
                 System.out.println("\nPress ENTER to continue.");
