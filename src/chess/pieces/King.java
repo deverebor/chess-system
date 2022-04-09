@@ -6,19 +6,15 @@ import chess.ChessPiece;
 import chess.Color;
 
 public class King extends ChessPiece {
-    public King(Board board, Color color) {
-        super(board, color);
-    }
-    
-    @Override
-    public String toString() {
-        return "K";
-    }
+    public King(Board board, Color color) { super(board, color); }
     
     private boolean canMove(Position position) {
         ChessPiece positionPiece = (ChessPiece)getBoard().piece(position);
         return positionPiece == null || positionPiece.getColor() != getColor();
     }
+    
+    @Override
+    public String toString() { return "K"; }
     
     @Override
     public boolean[][] possibleMoves() {
