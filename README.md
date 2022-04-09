@@ -17,6 +17,8 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [ ] Criar lógica para _ROQUE_
 - [ ] Criar lógica para _En Passant_
 - [ ] Criar lógica para _Promoção do Peão_
+- [ ] Refatoração das classes
+- [ ] Criação de testes unitários
 
 ## 💻 Pré-requisitos
 
